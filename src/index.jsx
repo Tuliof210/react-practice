@@ -1,16 +1,23 @@
 // necessários em JSX
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+
 //styles
 import './index.scss';
+
 //components
 //sempre começar com letra maiuscula
 //export sem nome, logo pode inventar
 import AppFirst from './App/First-App/First';
 import AppBomdia from './App/Morning-App/Morning';
 
+//export com nome, devemos realizar dessa maneira
+import TheOriginal, { TheClone } from './App/Clone-App/Clone';
+
 const name = 'Tulio';
 const text = 'Como vai?';
+
+const cloneName = 'Pedro';
 
 // Não é JS e sim JSX
 const content = (
@@ -19,6 +26,10 @@ const content = (
     <AppBomdia name={name} text={text} />
     <div className="teste">
       <AppFirst />
+    </div>
+    <div className="teste">
+      <TheOriginal name={cloneName} />
+      <TheClone name={cloneName} />
     </div>
   </Fragment>
 );
