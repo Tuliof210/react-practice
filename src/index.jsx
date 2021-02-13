@@ -9,11 +9,14 @@ import './index.scss';
 import AppFirst from './App/First-App/First';
 import AppBomdia from './App/Morning-App/Morning';
 
+const name = 'Tulio';
+const text = 'Como vai?';
+
 // Não é JS e sim JSX
 const content = (
   // Importando Fragment para usá-lo de forma resumida
   <Fragment>
-    <AppBomdia name="Carlos" text="Seu Arrombado" />
+    <AppBomdia name={name} text={text} />
     <div className="teste">
       <AppFirst />
     </div>
