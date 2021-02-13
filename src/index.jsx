@@ -1,16 +1,23 @@
-// Ambos imports sao sempre necessários em JSX
-import React from 'react';
+// necessários em JSX
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 //styles
 import './index.scss';
 //components
-import First from './App/firstApp/first';
+//sempre começar com letra maiuscula
+//export sem nome, logo pode inventar
+import AppFirst from './App/First-App/First';
+import AppBomdia from './App/Morning-App/Morning';
 
 // Não é JS e sim JSX
 const content = (
-  <div className="teste">
-    <First></First>
-  </div>
+  // Importando Fragment para usá-lo de forma resumida
+  <Fragment>
+    <AppBomdia name="Carlos" text="Seu Arrombado" />
+    <div className="teste">
+      <AppFirst />
+    </div>
+  </Fragment>
 );
 
 // Renderiza o component na tag com id 'root
