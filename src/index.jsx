@@ -26,6 +26,7 @@ const filhos = [
   { name: 'Eduardo' },
   { name: 'Edson' },
   { name: 'Ernane' },
+  { name: 'Tulio' },
 ];
 
 // Não é JS e sim JSX
@@ -41,13 +42,13 @@ const content = (
       <TheClone name={cloneName} />
     </div>
     <Saudacao tipo="Feliz natal" nome="Monica" />
-    <Familia name="Jose" lastName="Ramalho">
+    <Familia name="Jose" lastName="Silva">
       {/* 
         Cada elemento deve ter o parametro 'key' unique
         {...props} atribui as props correspondentes 
       */}
       {filhos.map((filho, index) => (
-        <Filho key={index} name={filho['name']} lastName="Ramalho" />
+        <Filho key={index} name={filho['name']} />
       ))}
     </Familia>
   </Fragment>
