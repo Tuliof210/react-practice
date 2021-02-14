@@ -11,8 +11,8 @@ export default class Saudacao extends Component {
   // criação do estado inicial
   // cada instancia tem seu proprio estado
   state = {
-    tipo: 'Fala',
-    nome: 'Milhaça',
+    tipo: this.props['tipo'],
+    nome: this.props['nome'],
   };
   render() {
     // Forma de acessar props em component de classe
