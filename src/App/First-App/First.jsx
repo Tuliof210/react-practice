@@ -1,3 +1,5 @@
+// Component funcional
+// codigo de exemplo
 import React from 'react';
 //styles
 import './First.scss';
