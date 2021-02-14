@@ -11,6 +11,7 @@ import './index.scss';
 import AppFirst from './App/First-App/First';
 import AppBomdia from './App/Morning-App/Morning';
 import Saudacao from './App/Class-App/ClassApp';
+import Familia from './App/Family-App/Pai';
 
 //export com nome, devemos realizar dessa maneira
 import TheOriginal, { TheClone } from './App/Clone-App/Clone';
@@ -33,6 +34,7 @@ const content = (
       <TheClone name={cloneName} />
     </div>
     <Saudacao tipo="Feliz natal" nome="Monica" />
+    <Familia name="Jose" lastName="Ramalho" />
   </Fragment>
 );
 
