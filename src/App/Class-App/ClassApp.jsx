@@ -10,19 +10,21 @@ import './ClassApp.scss';
 export default class Saudacao extends Component {
   // criação do estado inicial
   // cada instancia tem seu proprio estado
+  interval;
   state = {
     tipo: this.props['tipo'],
     nome: this.props['nome'],
+    btnTXT: 'COMEÇAR',
+    count: 0,
+    counting: false,
   };
   render() {
     // Forma de acessar props em component de classe
     // Usa-se a palavra 'this' para referenciar a instancia atual
-    const { tipo, nome } = this.state;
+    const { count, btnTXT, tipo, nome } = this.state;
     return (
       <div className="classAppWrapper">
-        <h1>
-          {tipo}, {nome}!
-        </h1>
+        <h1>Timer: {count}</h1>
         <hr />
         <input
           type="text"
@@ -36,6 +38,9 @@ export default class Saudacao extends Component {
           value={nome}
           onChange={(e) => this.setTipo(e)}
         />
+        <button className="default-btn" onClick={(e) => this.startCount()}>
+          {btnTXT}
+        </button>
       </div>
     );
   }
@@ -47,6 +52,20 @@ export default class Saudacao extends Component {
     });
 
     console.log({ val: event['target']['value'] });
+  }
+
+  startCount() {
+    this.setState({
+      counting: !this.state.counting,
+      btnTXT: this.state.btnTXT == 'COMEÇAR' ? 'PARAR' : 'COMEÇAR',
+    });
+    if (this.state['counting']) clearInterval(this.interval);
+    else
+      this.interval = setInterval(() => {
+        this.setState({
+          count: this.state.count + 1,
+        });
+      }, 1000);
   }
 
   /*
