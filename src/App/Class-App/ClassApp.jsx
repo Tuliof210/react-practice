@@ -48,4 +48,12 @@ export default class Saudacao extends Component {
 
     console.log({ val: event['target']['value'] });
   }
+
+  /*
+  NÃO existe two way data biding em react
+  Em angular a view pode atualizar o state e o state a view
+  Em REACT apenas o state atualiza a view
+
+  o DADO que manda na atualização do component
+  */
 }
