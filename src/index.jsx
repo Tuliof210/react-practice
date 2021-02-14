@@ -14,7 +14,7 @@ import Saudacao from './App/Class-App/ClassApp';
 import Familia from './App/Family-App/Pai';
 
 //export com nome, devemos realizar dessa maneira
-import TheOriginal, { TheClone } from './App/Clone-App/Clone';
+import { TheOriginal, TheClone } from './App/Clone-App/Clone';
 
 const name = 'Pedro';
 const text = 'Como vai?';

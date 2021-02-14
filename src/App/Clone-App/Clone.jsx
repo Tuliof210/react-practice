@@ -11,8 +11,6 @@ export const TheClone = (props) => (
   </h3>
 );
 
-export default TheClone;
-
 // um arquivo exportando 2 components
 // por ser um export com nome devemos respeitar isso ao importar
 
