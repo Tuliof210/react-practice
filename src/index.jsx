@@ -8,13 +8,13 @@ import './index.scss';
 //components
 //sempre começar com letra maiuscula
 //export sem nome, logo pode inventar
-import AppFirst from './App/First-App/First';
-import AppBomdia from './App/Morning-App/Morning';
-import Saudacao from './App/Class-App/ClassApp';
-import Familia from './App/Family-App/Pai';
-import Filho from './App/Family-App/Filho-App/Filho';
+import AppFirst from './app/First-App/First';
+import AppBomdia from './app/Morning-App/Morning';
+import Saudacao from './app/Class-App/ClassApp';
+import Familia from './app/Family-App/Pai';
+import Filho from './app/Family-App/Filho-App/Filho';
 //export com nome, devemos realizar dessa maneira
-import { TheOriginal, TheClone } from './App/Clone-App/Clone';
+import { TheOriginal, TheClone } from './app/Clone-App/Clone';
 
 const name = 'Pedro';
 const text = 'Como vai?';
@@ -27,6 +27,7 @@ const filhos = [
   { name: 'Edson' },
   { name: 'Ernane' },
   { name: 'Tulio' },
+  { name: 'Mariza' },
 ];
 
 // Não é JS e sim JSX
