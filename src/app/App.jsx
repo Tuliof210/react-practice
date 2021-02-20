@@ -2,17 +2,14 @@ import './App.scss';
 import React from 'react';
 
 export default (props) => {
-  const value = {
-    min: props['min'],
-    max: props['max'],
-    num: 50,
-  };
+  const { min, max } = props;
+  const num = parseInt(Math.random() * (max - min) + min);
   return (
     <div>
-      <h2>Min: {value['min']}</h2>
-      <h2>Max: {value['max']}</h2>
-      <hr />
-      <h1>Value:{value['num']}</h1>
+      <h2>Min: {min}</h2>
+      <h2>Max: {max}</h2>
+      <br />
+      <h1>Value: {num}</h1>
     </div>
   );
 };
